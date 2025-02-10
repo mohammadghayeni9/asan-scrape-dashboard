@@ -1,0 +1,141 @@
+@import './base.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #1e1e1e;
+    --foreground: #e6e6e6;
+
+    --title: #ffffff;
+
+    --popover: #292929;
+    --popover-foreground: #949494;
+
+    --card: #1f1f1f;
+    --card-foreground: #ffffff;
+
+    --border: #2e2e2e;
+    --input: #595959;
+
+    --primary: #12a594;
+    --primary-0: #e3fcf9;
+    --primary-50: #cef3ef;
+    --primary-100: #b9ebe5;
+    --primary-150: #a4e2db;
+    --primary-200: #8fd9d1;
+    --primary-300: #66c8bc;
+    --primary-400: #3cb6a8;
+    --primary-500: #12a594;
+    --primary-600: #0e8476;
+    --primary-700: #0b6359;
+    --primary-800: #07423b;
+    --primary-850: #05322c;
+    --primary-900: #04211e;
+    --primary-950: #02110f;
+    --primary-foreground-light: #ffffff;
+    --primary-foreground-dark: #000000;
+
+    --secondary: #1e1e1e;
+    --secondary-100: #181818;
+    --secondary-200: #1a1a1a;
+    --secondary-300: #121212;
+    --secondary-400: #0c0c0c;
+    --secondary-500: #030303;
+    --secondary-600: #323232;
+    --secondary-700: #2b2b2b;
+    --secondary-900: #000000;
+    --secondary-foreground: #ffffff;
+
+    --gray: #b2b2b2;
+    --gray-100: #a3a3a3;
+    --gray-200: #949494;
+    --gray-300: #868686;
+    --gray-400: #777777;
+    --gray-500: #595959;
+    --gray-600: #3c3c3c;
+    --gray-foreground-light: #ffffff;
+    --gray-foreground-dark: #000000;
+
+    --ring: #3cb6a8;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: #e6e6e6;
+    --foreground: #e6e6e6;
+
+    --title: #ffffff;
+
+    --popover: #292929;
+    --popover-foreground: #949494;
+
+    --card: #1f1f1f;
+    --card-foreground: #ffffff;
+
+    --border: #2e2e2e;
+    --input: #595959;
+
+    --primary: #12a594;
+    --primary-0: #e3fcf9;
+    --primary-50: #cef3ef;
+    --primary-100: #b9ebe5;
+    --primary-150: #a4e2db;
+    --primary-200: #8fd9d1;
+    --primary-300: #66c8bc;
+    --primary-400: #3cb6a8;
+    --primary-500: #12a594;
+    --primary-600: #0e8476;
+    --primary-700: #0b6359;
+    --primary-800: #07423b;
+    --primary-850: #05322c;
+    --primary-900: #04211e;
+    --primary-950: #02110f;
+    --primary-foreground-light: #ffffff;
+    --primary-foreground-dark: #000000;
+
+    --secondary: #1e1e1e;
+    --secondary-100: #181818;
+    --secondary-200: #121212;
+    --secondary-300: #0c0c0c;
+    --secondary-400: #0c0c0c;
+    --secondary-500: #030303;
+    --secondary-600: #323232;
+    --secondary-700: #2b2b2b;
+    --secondary-900: #000000;
+    --secondary-foreground: #ffffff;
+
+    --gray: #b2b2b2;
+    --gray-100: #a3a3a3;
+    --gray-200: #949494;
+    --gray-300: #868686;
+    --gray-400: #777777;
+    --gray-500: #595959;
+    --gray-600: #3c3c3c;
+    --gray-foreground-light: #ffffff;
+    --gray-foreground-dark: #000000;
+
+    --ring: #3cb6a8;
+  }
+}
+
+@layer components {
+  .text-shadow-primary {
+    text-shadow: 0 0 8px var(--primary-600);
+    @apply transition-all duration-200;
+  }
+  .text-shadow-primary:hover {
+    text-shadow: 0 0 10px var(--primary-600);
+  }
+}
+@layer base {
+  div {
+    @apply border-border border-solid;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

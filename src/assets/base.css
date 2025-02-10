@@ -1,0 +1,19 @@
+@font-face {
+  font-family: shabnam;
+  src: url('@/assets/fonts/Shabnam.ttf');
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-family: shabnam;
+}
