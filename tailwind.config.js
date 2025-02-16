@@ -77,6 +77,9 @@ module.exports = {
           'foreground-light': 'var(--gray-foreground-light)',
           'foreground-dark': 'var(--gray-foreground-dark)',
         },
+        error: {
+          DEFAULT: 'var(--error)',
+        },
         popover: {
           DEFAULT: 'var(--popover)',
           foreground: 'var(--popover-foreground)',
