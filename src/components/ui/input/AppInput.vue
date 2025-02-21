@@ -11,6 +11,7 @@ const props = defineProps([
   'containerClass',
   'placeholder',
   'error',
+  'disabled',
 ])
 
 const emits = defineEmits(['update:modelValue'])
@@ -30,6 +31,8 @@ const modelValue = useVModel(props, 'modelValue', emits, {
     <input
       v-model="modelValue"
       :placeholder="props.placeholder"
+      :value="modelValue"
+      :disabled="props.disabled"
       :class="
         cn(
           'relative z-20 flex h-11 w-full mt-3 rounded-md border border-border bg-input px-3 py-2 text-lg placeholder:text-xs ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all',

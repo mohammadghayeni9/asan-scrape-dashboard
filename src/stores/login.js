@@ -1,14 +1,31 @@
-import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useLoginStore = defineStore('login', () => {
-  const requestId = ref('')
-  const setRequestId = (value) => (requestId.value = value)
-  const logOut = () => {
-    localStorage.removeItem('token')
-    localStorage.removeItem('user')
-    requestId.value = ''
-  }
+export const LOGIN_STEPS = {
+  phoneNumber: 'PHONE_NUMBER',
+  otpCode: 'OTP_CODE',
+  completeProfile: 'COMPLETE_PROFILE',
+}
 
-  return { requestId, setRequestId, logOut }
+export const useLoginStore = defineStore('login', {
+  state: () => ({
+    requestId: 0,
+    loginStep: LOGIN_STEPS.completeProfile,
+    phoneNumber: '',
+  }),
+  actions: {
+    setRequestId(value) {
+      this.requestId = value
+    },
+    logOut() {
+      localStorage.removeItem('auth')
+      localStorage.removeItem('user')
+      this.requestId = ''
+    },
+    setLoginStep(value) {
+      this.loginStep = value
+    },
+    setPhoneNumber(value) {
+      this.phoneNumber = value
+    },
+  },
 })
