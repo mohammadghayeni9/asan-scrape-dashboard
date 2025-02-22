@@ -75,6 +75,7 @@ module.exports = {
           400: 'var(--gray-400)',
           500: 'var(--gray-500)',
           600: 'var(--gray-600)',
+          700: 'var(--gray-700)',
           'foreground-light': 'var(--gray-foreground-light)',
           'foreground-dark': 'var(--gray-foreground-dark)',
         },

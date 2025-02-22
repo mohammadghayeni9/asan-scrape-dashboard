@@ -1,5 +1,5 @@
 <script setup>
-import { toRefs } from 'vue'
+import { computed, toRefs } from 'vue'
 
 const props = defineProps({
   title: {
@@ -10,8 +10,12 @@ const props = defineProps({
     type: String,
     default: '12px 16px',
   },
+  notShadow: {
+    type: Boolean,
+    default: false,
+  },
 })
-
+const shadow = computed(() => (props.notShadow ? '' : 'drop-shadow(0 0 7px var(--primary-600))'))
 const { title, padding } = toRefs(props)
 </script>
 
@@ -23,7 +27,7 @@ const { title, padding } = toRefs(props)
 
 <style scoped lang="scss">
 .button {
-  filter: drop-shadow(0 0 7px var(--primary-600));
+  filter: v-bind(shadow);
   color: var(--text-title-color);
   background-color: var(--primary);
   border-radius: 8px;
