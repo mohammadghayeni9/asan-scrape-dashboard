@@ -3,5 +3,8 @@ import AppPage from '@/components/page/AppPage.vue'
 </script>
 
 <template>
-  <AppPage></AppPage>
+  <AppPage>
+    <template #navbar> </template>
+    <template #main> </template>
+  </AppPage>
 </template>

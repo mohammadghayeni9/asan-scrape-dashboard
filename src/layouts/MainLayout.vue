@@ -71,7 +71,7 @@ const sendTicket = () => {}
           >
             ارسال نظر
           </div>
-          <PrimaryButton not-shadow title="ارسال تیکت" @click="sendTicket()" />
+          <PrimaryButton not-shadow class="!h-12" title="ارسال تیکت" @click="sendTicket()" />
         </div>
       </header>
       <main>
