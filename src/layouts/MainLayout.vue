@@ -2,8 +2,8 @@
 import PrimaryButton from '@/components/button/PrimaryButton.vue'
 import BorderedCard from '@/components/card/BorderedCard.vue'
 import { SIDEBAR_MENUS } from '@/constants/sidebar'
+import { cn } from '@/lib/utils'
 import { useUserStore } from '@/stores/user'
-import { cn } from '@/utils/ui/ui'
 import { Icon } from '@iconify/vue'
 import { useRoute } from 'vue-router'
 
@@ -50,7 +50,7 @@ const sendTicket = () => {}
         </router-link>
       </div>
     </div>
-    <div class="flex-1">
+    <div class="flex-1 flex flex-col">
       <header
         class="border-b border-solid border-border px-6 py-4 flex items-center justify-between"
       >
@@ -74,7 +74,7 @@ const sendTicket = () => {}
           <PrimaryButton not-shadow class="!h-12" title="ارسال تیکت" @click="sendTicket()" />
         </div>
       </header>
-      <main>
+      <main class="flex-1">
         <router-view></router-view>
       </main>
     </div>

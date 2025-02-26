@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import { cn } from '@/utils/ui/ui'
+<script setup>
+import { cn } from '@/lib/utils'
 import { useVModel } from '@vueuse/core'
 
 const props = defineProps([

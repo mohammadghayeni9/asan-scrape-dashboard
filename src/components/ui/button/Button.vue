@@ -1,5 +1,5 @@
 <script setup>
-import { cn } from '@/utils/ui/ui'
+import { cn } from '@/lib/utils'
 import { Primitive } from 'radix-vue'
 
 const props = withDefaults(defineProps(['variant', 'size', 'class']), {

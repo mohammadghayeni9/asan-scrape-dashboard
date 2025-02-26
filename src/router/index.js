@@ -18,7 +18,7 @@ const routes = [
   },
   {
     path: PAGE_ROUTES.main.robots,
-    component: () => import('@/views/main/DashboardView.vue'),
+    component: () => import('@/views/main/RobotsView.vue'),
     meta: {
       layout: LAYOUTS.main,
       //  requiresAuth: true
